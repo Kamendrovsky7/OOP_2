@@ -1,5 +1,6 @@
 from pprint import pprint
 
+# первое задание, открытие и чтение фаила из исходного txt, создание кулинарной книги
 def cook_book():
     with open('recipes.txt', encoding='utf-8') as file:
         cook_book = {}
@@ -12,6 +13,8 @@ def cook_book():
             cook_book[name] = cook_cook
     return cook_book
 
+# второе задание, реализация функции по расчёту ингрединетов на кол-во персон
+
 def get_shop_list_by_dishes(dishes, person_count):
     shop_list = {}
     for dish in dishes:
@@ -23,9 +26,11 @@ def get_shop_list_by_dishes(dishes, person_count):
     return shop_list
 
 
-
+# вывод книги рецептов
 cook_book = cook_book()
 pprint(cook_book)
 
-print("Расчет ингрединетов на указанное количество персон:",'\n', get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 10))
+# вывод расчета
+
+print("Расчет ингредиентов на указанное количество персон:",'\n', get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 2))
 
